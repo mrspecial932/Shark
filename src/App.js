@@ -22,7 +22,9 @@ export default function App() {
     console.log(chainId)
 
     //Fetch current account & balance from metamask
-    await loadAccount(provider,dispatch)
+    window.ethereum.on("accountsChanged", ()=>{
+       loadAccount(provider , dispatch)
+    })
   
     const Shark=config[chainId].Shark
     const mEth=config[chainId].mETH

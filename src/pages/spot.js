@@ -6,18 +6,36 @@ import Priceorder from '../component/priceorder'
 
 function Spot() {
   return (
-    <div className='pt-32 lg:px-24 max-w-8xl '>
+    <section class="pt-36">
+    <div class="py-4 mx-auto max-w-screen-xl sm:py-4">
       
-    <div className=' grid grid-cols-3 h-full auto-rows-[300px] gap-12'>
-       <Pricechart className="p-2 col-span-3 flex flex-col items-center "/>
-      <Order className="p-2 flex flex-col items-center"/>
-      <Priceorder className="p-2 flex flex-col items-center"/>
-      <Orderhis className="p-2 flex flex-col items-center"/>
-    </div>
-  
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 ">
+        <div class="col-span-2 sm:col-span-1 md:col-span-2  flex flex-col">
+          
+          <Pricechart class=""/>
+          
+          </div>
+       
     
+         
+          <div class="grid gap-4 grid-cols-2 sm:grid-cols-2 lg:grid-cols-2">
+          
+            <div class="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 ">
+             <Order/>
+            </div>
+            <div class="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4">
+             <Orderhis/>
+          </div>
+        </div>
+       
+      </div>
+
+      <div class="col-span-2 sm:col-span-1 md:col-span-  h-auto md:h-full flex flex-col">
+         <Priceorder/>
+        </div>
     
     </div>
+  </section>
     
   
   )
